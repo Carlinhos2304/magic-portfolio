@@ -7,7 +7,7 @@ import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
-import { person, about, blog, work, gallery } from "@/app/resources/content";
+import { person, about, work} from "@/app/resources/content";
 import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
@@ -28,8 +28,8 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
         second: "2-digit",
         hour12: false,
       };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-      setCurrentTime(timeString);
+      //const timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      //setCurrentTime(timeString);
     };
 
     updateTime();
@@ -113,7 +113,7 @@ export const Header = () => {
                   />
                 </>
               )}
-              {routes["/blog"] && (
+              {/* {routes["/blog"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
@@ -129,8 +129,8 @@ export const Header = () => {
                     selected={pathname.startsWith("/blog")}
                   />
                 </>
-              )}
-              {routes["/gallery"] && (
+              )} */}
+              {/* {routes["/gallery"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
@@ -146,7 +146,7 @@ export const Header = () => {
                     selected={pathname.startsWith("/gallery")}
                   />
                 </>
-              )}
+              )} */}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

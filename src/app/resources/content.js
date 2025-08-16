@@ -1,16 +1,16 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Carlos",
+  lastName: "Mendez",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  role: "Ingeniero Informatico",
+  avatar: "/images/foto_perfil.jpeg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Chile", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Español"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -30,14 +30,14 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Carlinhos2304",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/carlos-miguel-768383275",
   },
-  {
+  /* {
     name: "X",
     icon: "x",
     link: "",
@@ -46,7 +46,7 @@ const social = [
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
-  },
+  }, */
 ];
 
 const home = {
@@ -71,7 +71,7 @@ const home = {
 
 const about = {
   path: "/about",
-  label: "About",
+  label: "Sobre mi",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -196,18 +196,18 @@ const about = {
   },
 };
 
-const blog = {
+/* const blog = {
   path: "/blog",
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
-};
+}; */
 
 const work = {
   path: "/work",
-  label: "Work",
+  label: "Proyectos",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -265,4 +265,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };
